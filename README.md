@@ -1,0 +1,5 @@
+Tutorial 6 - Web Server
+
+Commit 1 Reflection notes
+
+Pada Milestone 1 ini, saya telah mempelajari cara membuat sebuah web server sederhana yang berjalan pada single thread menggunakan bahasa Rust. Saya menggunakan TcpListener dari standard library untuk membuka dan mendengarkan koneksi TCP yang masuk secara terus-menerus pada localhost port 7878. Selanjutnya, saya menambahkan fungsi handle_connection yang bertugas untuk memproses setiap stream koneksi TCP yang masuk. Di dalam fungsi itu, saya menggunakan BufReader untuk membaca data request dari browser secara efisien dari stream, baris demi baris. Kemudian, saya mengumpulkan baris-baris teks tersebut ke dalam sebuah struktur data Vector dengan memanfaatkan metode fungsional seperti lines(), map(), dan take_while() hingga menjumpai baris kosong. Terakhir, saya mencetak isi dari request tersebut ke terminal menggunakan makro println!. Hal ini memungkinkan saya untuk melihat langsung format HTTP request yang dikirimkan oleh browser, seperti metode GET, Host, dan User-Agent yang digunakan.
